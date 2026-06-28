@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Be More Fit • Lateral Raise Machine</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="lateralraisemachine.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <!-- LOGOS -->
+
+        <div class="hero-topbar">
+
+            <img src="../../Images/Home Page Image/jaygajananlogo.png"
+                alt="Jay Gajanan Mitra Mandal"
+                class="jgm-logo">
+
+            <img src="../../Images/Home Page Image/bemorefitlogo.png"
+                alt="Be More Fit"
+                class="bmf-logo">
+
+        </div>
+
+        <!-- CONTENT WRAPPER -->
+
+        <div class="hero-content-wrapper">
+
+            <div class="hero-left">
+
+                <a href="../../index.html">
+                    <button class="back-btn">← Back</button>
+                </a>
+
+                <h1>
+                    LATERAL RAISE <br>
+                    <span>MACHINE</span>
+                </h1>
+
+                <div class="marathi-title">
+                    लॅटरल रेज मशीन
+                </div>
+
+                <p>
+                    The Lateral Raise Machine is designed to isolate and strengthen
+                    the side deltoid muscles. It provides a controlled range of motion
+                    that helps build broader shoulders, improve shoulder stability,
+                    and enhance overall upper-body aesthetics and strength.
+                </p>
+
+            </div>
+
+            <div class="hero-right">
+
+                <div class="machine-image-box">
+
+                    <img src="lateralraisemachine.png"
+                        alt="Lateral Raise Machine">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- EXERCISE SECTION -->
+
+    <section class="exercise-section">
+
+        <h2>
+            CHOOSE YOUR <span>EXERCISE</span>
+        </h2>
+
+        <div class="exercise-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="exercise-card">
+
+                <img src="lateralraises.png"
+                    alt="Lateral Raises">
+
+                <div class="exercise-info">
+
+                    <h3>
+                        Lateral Raises
+                    </h3>
+
+                    <p class="exercise-marathi">
+                        लॅटरल रेजेस
+                    </p>
+
+                    <button onclick="openVideo('')">
+                        Watch Video (व्हिडिओ पहा)
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- VIDEO POPUP -->
+
+    <div class="video-popup" id="videoPopup">
+
+        <div class="video-box">
+
+            <span class="close-btn"
+                onclick="closeVideo()">
+
+                ✕
+
+            </span>
+
+            <iframe id="videoFrame"
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <p>
+                © 2026 Be More Fit. All Rights Reserved.
+            </p>
+
+            <p>
+                Website Created By
+                <span>House Of Creators</span>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- SCRIPT -->
+
+    <script>
+
+        function openVideo(videoLink) {
+
+            document.getElementById("videoPopup").style.display = "flex";
+
+            document.getElementById("videoFrame").src =
+                videoLink + "?autoplay=1&rel=0";
+
+        }
+
+        function closeVideo() {
+
+            document.getElementById("videoPopup").style.display = "none";
+
+            document.getElementById("videoFrame").src = "";
+
+        }
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+
+                closeVideo();
+
+            }
+
+        });
+
+        document.getElementById("videoPopup")
+            .addEventListener("click", function (e) {
+
+                if (e.target.id === "videoPopup") {
+
+                    closeVideo();
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>
