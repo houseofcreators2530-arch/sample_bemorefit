@@ -1,0 +1,259 @@
+<<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Be More Fit Gym</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <img src="jaygajananlogo.png" alt="logo">
+            <img src="bemorefitlogo.png" alt="logo2">
+            
+
+            
+        </div>
+
+        <div class="brand-name">
+    BE MORE <span>FIT</span>
+</div>
+
+        <nav>
+
+            <a href="index.html"> Home </a>
+            <a href="Machine/machinepageindex.html">Machines</a>
+            <a href="#">About Us</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <div class="mini-title">
+                TRAIN SMARTER. BECOME STRONGER.
+            </div>
+
+            <h1>
+
+                SCAN THE QR &
+
+                <span>
+                    TRAIN SMARTER
+                </span>
+
+            </h1>
+
+            <p>
+
+                Scan the QR code on any machine and instantly
+                access exercise tutorials, beginner guides
+                and professional tips.
+
+            </p>
+
+            <br>
+            <!-- SEARCH BAR -->
+
+<div class="search-box">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search Machines & Exercises...">
+
+    <button onclick="searchMachine()">
+
+        🔍
+
+    </button>
+
+</div>
+
+        
+        </div>
+
+        <div class="hero-right">
+
+            <img src="Images/Home Page Image/homopagebackground.png">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="card">
+
+            <img src="Images/Home Page Image/advancedtraining.png">
+
+            <h3>Advanced Equipment</h3>
+
+            <p>
+                Latest technology machines for better results.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="Images/Home Page Image/parking.png">
+
+            <h3>Free Parking</h3>
+
+            <p>
+                Hassle-free parking space for all our members.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="Images/Home Page Image/freelockers.png">
+
+            <h3>Free Lockers</h3>
+
+            <p>
+                Secure lockers to keep your belongings safe.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/Home Page Image/professionaltrainers.png">
+
+            <h3>Professional Trainers</h3>
+
+            <p>
+                Certified and experienced trainers to guide you.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="images/Home Page Image/ORBASED.png">
+
+            <h3>QR Based Smart Training</h3>
+
+            <p>
+                Scan, learn and perform exercises the right way.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <img src="images/Home Page Image/bemorefitlogo.png">
+
+            <h2>
+                BE MORE <span>FIT</span>
+            </h2>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>CONTACT US</h3>
+
+            <p>
+
+                📍 Kukshet Gaon, Plot P11,<br>
+
+                Sector 14 Nerul Rd,<br>
+
+                Sector 14, Nerul,<br>
+
+                Navi Mumbai,<br>
+
+                Maharashtra - 400706
+
+            </p>
+
+            <p>
+
+                📞 +91 70396 35557
+
+            </p>
+
+            <p>
+
+                📧 sagar_gawankar@yahoo.co.in
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+function searchMachine(){
+
+    let value = document
+        .getElementById("searchInput")
+        .value
+        .trim();
+
+    if(value===""){
+
+        window.location.href="Machines/machinepageindex.html";
+
+    }else{
+
+        window.location.href=
+        "Machines/machinepageindex.html?search="
+        + encodeURIComponent(value);
+
+    }
+
+}
+
+document
+.getElementById("searchInput")
+.addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        searchMachine();
+
+    }
+
+});
+
+</script>
+</body>
+</html>

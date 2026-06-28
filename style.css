@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f8f8f8;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* ================= NAVBAR (DESKTOP) ================= */
+header {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img:first-child {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo img:last-child {
+    height: 75px; /* 55 varun 75 */
+    width: auto;
+    object-fit: contain;
+    margin-left: 10px; /* thoda right */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #18a63d;
+}
+
+.search-box {
+    display: flex;
+    width: 280px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #18a63d;
+    background: #fff;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    width: 55px;
+    border: none;
+    background: #18a63d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ================= HERO (DESKTOP) ================= */
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 91px);
+    display: grid;
+    grid-template-columns: 45% 55%;
+    background: #fff;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 8%;
+}
+
+.mini-title {
+    display: inline-block;
+    width: fit-content;
+    background: #dff5e4;
+    color: #18a63d;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero-left h1 {
+    font-size: 54px;
+    line-height: 66px;
+    font-weight: 900;
+}
+
+.hero-left h1 span {
+    color: #18a63d;
+}
+
+.hero-left p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #555;
+    max-width: 500px;
+}
+
+.hero-btn {
+    margin-top: 30px;
+    width: 280px;
+    height: 55px;
+    border: none;
+    border-radius: 8px;
+    background: #18a63d;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(24, 166, 61, .25);
+}
+
+.hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= FEATURES (DESKTOP) ================= */
+.features {
+    width: 90%;
+    max-width: 1440px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+}
+
+/* ================= FOOTER (DESKTOP) ================= */
+footer {
+    margin-top: 60px;
+    background: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 8%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 60px;
+}
+
+.footer-logo h2 {
+    font-size: 34px;
+}
+
+.footer-logo span {
+    color: #18a63d;
+}
+
+.footer-contact h3 {
+    color: #18a63d;
+    margin-bottom: 15px;
+}
+
+.footer-contact p {
+    color: #ddd;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+
+/* ================= RESPONSIVE TABLET VIEW (1200px and under) ================= */
+@media(max-width: 1200px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+        min-height: 450px;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ================= RESPONSIVE MOBILE VIEW (768px and under) ================= */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack components cleanly into rows */
+        align-items: center;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    /* Scales down logos uniformly so they stay on a single row */
+    .logo img:first-child {
+        height: 42px;
+    }
+
+    .logo img:last-child {
+        height: 42px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: space-between; /* Evenly spaces links across mobile screens */
+        gap: 10px;
+        padding: 5px 0;
+    }
+
+    nav a {
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .search-box {
+        width: 100%; /* Stretches search input edge-to-edge for easy interaction */
+    }
+
+    .hero-left {
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .mini-title {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .hero-left h1 {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .hero-left p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .hero-right {
+        grid-row: 1;
+        height: 180px; /* Shrinks the image height significantly on mobile */
+        width: 100%;
+    }
+
+    .features {
+        grid-template-columns: 1fr; /* Formats cards into a smooth single column */
+        margin: 40px auto;
+    }
+
+    .card {
+        padding: 25px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+        padding: 40px 20px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand-name{
+    margin-left:80px;
+    font-size:42px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#111;
+}
+
+.brand-name span{
+    color:#18a63d;
+}
