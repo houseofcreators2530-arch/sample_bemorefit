@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Machines | Be More Fit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="machinegallery.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+            HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                EXPLORE <span>MACHINES</span>
+
+            </h1>
+
+            <p>
+
+                Scan. Learn. Train Smarter.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    
+
+    </section>
+
+    <!-- =========================
+            MACHINE GRID
+    ========================== -->
+
+    <section class="machine-section">
+    <div class="machine-grid">
+
+        <a href="../Machine Pages/2declinebenchpressbarbell/index.html" class="machine-card">
+            <img src="imagess/declinebenchpressbarbell.png">
+            <h3>Decline Bench Press (Barbell) </h3>
+        </a>
+
+       
+
+        <a href="../Machine Pages/2declinebenchpressmachine/index.html" class="machine-card">
+            <img src="imagess/flatbenchpressbarbell.png">
+            <h3> Flat Bench Press Barbell </h3>
+        </a>
+
+
+         <a href="../Machine Pages/4inclinebenchpressbarbell/index.html" class="machine-card">
+            <img src="imagess/inclinebenchpressbarbell.png">
+            <h3>Incline Bench Press Barbell </h3>
+        </a>
+
+        
+
+        <a href="../Machine Pages/5beltsquatmachine/index.html" class="machine-card">
+            <img src="imagess/beltsquatmachine.png">
+            <h3> Belt Squat Machine </h3>
+        </a>
+
+         <a href="../Machine Pages/bench/index.html" class="machine-card">
+            <img src="imagess/bench.png">
+            <h3> Bench </h3>
+        </a>
+
+        <a href="../Machine Pages/bicepcurlmachine/index.html" class="machine-card">
+            <img src="imagess/bicepcurlmachine.png">
+            <h3> Bicep Curl Machine </h3>
+        </a>
+
+         <a href="../Machine Pages/chainrowingmachine/index.html" class="machine-card">
+            <img src="imagess/chainrowingmachine.png">
+            <h3> Chain/Power Rowing</h3>
+        </a>
+
+
+    <a href="../Machine Pages/cyclingcardiomachine/index.html" class="machine-card">
+            <img src="imagess/cyclingcardiomachine.png">
+            <h3> Cardio Cycle </h3>
+        </a>
+
+
+        <a href="../Machine Pages/dualfunctionaltraining/index.html" class="machine-card">
+            <img src="imagess/dualfunctionaltraining.png">
+            <h3> Dual Functional Traning </h3>
+        </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <a href="../Machines Pages/1abduction/index.html" class="machine-card">
+            <img src="imagess/adductionimage.png">
+            <h3>Abduction & Adduction Machine</h3>
+        </a>
+
+         <a href="../Machines Pages/2declinebenchpressmachine/index.html" class="machine-card">
+            <img src="imagess/declinebenchpressmachine.png">
+            <h3>Decline Bench Press Machine </h3>
+        </a>
+
+        <a href="../Machines Pages/4inclinebenchpressmachine/index.html" class="machine-card">
+            <img src="imagess/inclinebenchpressmachine.png">
+            <h3> Incline Bench Press Machine </h3>
+        </a>
+
+        
+         <a href="../Machines Pages/3flatbenchpressmachine/flatbenchpress.html" class="machine-card">
+            <img src="imagess/flatbenchpressmachine.png">
+            <h3> Flat Bench Press Machine </h3>
+        </a>
+
+
+
+
+    </div>
+</section>
+    <footer>
+
+        <h2>Be More Fit</h2>
+
+        <p>
+
+            Scan • Learn • Train Smarter
+
+        </p>
+
+        <p>
+
+            © 2026 Be More Fit Gym. All Rights Reserved.
+
+        </p>
+
+        <p>
+
+            Website Designed & Developed by House of Creators.
+
+        </p>
+
+    </footer>
+
+    <script>
+
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", function () {
+
+            let filter = searchInput.value.toUpperCase();
+
+            let cards = document.querySelectorAll(".machine-card");
+
+            cards.forEach(card => {
+
+                let text = card.innerText.toUpperCase();
+
+                if (text.indexOf(filter) > -1) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
